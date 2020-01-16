@@ -1,0 +1,123 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"4ea0272bae","applicationID":"7185733","transactionName":"M1RTNkVWCEYDVxJfVgoecDFnGBZAABsFWVcSXlIDQ1gUXANHSVdPDUJeEl5NB0cQWwhQUAdZUExWRBZN","queueTime":0,"applicationTime":23,"ttGuid":"BD8D79883DA4633B","agent":""}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><link rel="shortcut icon" href="../../imagenes/favicon.ico" /><link rel="shortcut icon" href="../../imagenes/favicon.png" /><meta name="description" content="Sistema de Postulación en Línea" /><meta name="keywords" content="Sistema de Postulación en Línea" /><title>
+	Sistema de Postulación en Línea - Listado de Convocatorias
+</title><link rel="stylesheet" type="text/css" href="../../css/pub/e01_global.css" media="screen" /><link rel="stylesheet" type="text/css" href="../../css/pub/e02_cabecera.css" media="screen" /><link rel="stylesheet" type="text/css" href="../../css/pub/e03_forms.css" media="screen" /><link rel="stylesheet" type="text/css" href="../../css/pub/e04_inicio.css" media="screen" /><link rel="stylesheet" type="text/css" href="../../css/pub/e05_contenidos.css" media="screen" /><link rel="stylesheet" type="text/css" href="../../css/e05_forms.css" /><link rel="stylesheet" type="text/css" href="../../css/e06_inicio.css" /><link rel="stylesheet" type="text/css" href="../../css/e07_listados.css" /><link rel="stylesheet" type="text/css" href="../../css/e80_pantalla01.css" /><link rel="stylesheet" type="text/css" href="../../css/e10_toolTip.css" /><link rel="stylesheet" type="text/css" href="../../css/e08_greybox.css" /><link rel="stylesheet" type="text/css" href="../../css/e09_lightbox.css" media="screen" />
+    <script type="text/javascript">
+        var GB_ROOT_DIR = "../../scripts/";
+    </script>
+    <script type="text/javascript" src="../../scripts/AJS.js"></script>
+    <script type="text/javascript" src="../../scripts/AJS_fx.js"></script>
+    <script type="text/javascript" src="../../scripts/gb_scripts.js"></script>
+    <script type="text/javascript" src="../../scripts/prototype.js"></script>
+    
+    <script type="text/javascript" src="../../scripts/printpage.js"></script>
+
+</head>
+<body style='min-width:735px !important;'>
+    <form name="form1" method="post" action="avisopizarronficha.aspx?i=2017" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D3C72937" />
+<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+
+    <div class="e80_pant02Centro" style="width:732px; float:left; top:0px;">
+        <div class="e04_ventana01" style="width:732px;">
+            <div class="e04_cuerpo03" style="width:732px; height:auto; left:0px;" >
+                <span id="panelEstado"><div class="e80_pant02Centro" id="panelEstado" runat="server" style="width:610px; height:25px; border:solid 2px #ccc; border-bottom:none; margin:0px 45px;"><ul class="e05_form2Columnas"><li style="width:570px; text-align:center; font-size:13px; font-weight:bold;">Esta convocatoria fue declarado Desierto</li></ul></div></span>
+                
+                <div id="panelFicha" class="e80_pant02Centro" style="width:590px; padding:10px; border:solid 2px #ccc; margin:0px 45px;">
+                
+                    <div>
+                        <span id="lblAvisoTrabajo" class="e01_txtGris02">Aviso Pizarrón: Proceso de Selección</span>
+                        <span id="lblAvisoTrabajoDatos"><ul class="e05_form2Columnas"><li style="font-size:11px;"><b>Ministerio</b><br />Ministerio de Defensa Nacional</li><li style="font-size:11px;"><b>Institución / Entidad</b><br />Dirección General de Aeronáutica Civil DGAC / </li><li style="font-size:11px;"><b>Cargo</b><br />TÉCNICO NIVEL SUPERIOR CON MENCIÓN EN ADMINISTRACIÓN O RECURSOS HUMANOS</li><li style="font-size:11px;"><b>Nº de Vacantes</b><br />1</li><li style="font-size:11px;"><b>Área de Trabajo</b><br />Recursos Humanos</li><li style="font-size:11px;"><b>Región</b><br />Metropolitana</li><li style="font-size:11px;"><b>Ciudad</b><br />SANTAIGO</li><li style="font-size:11px;"><b>Tipo de Vacante</b><br />Contrata</li><li>&nbsp;<br /></li></ul></span>
+                        <ul class="e05_form1Columna">
+                            <span id="lblArea"></span>
+                            <span id="lblDescripcion"></span>
+                        </ul>
+                     </div>
+                     <div style="clear:both;"></div>
+                     <div>
+                        <ul class="e05_form1Columna">
+                            <span id="lblRequisitos"><li style="width:570px; font-size:11px;"><ul class="e05_form1Columna"><li><br/><b>Requisitos Generales / Específicos</b><br /><ul>
+	<li>
+		Los interesados deber&aacute;n cumplir los requisitos generales se&ntilde;alados en el Art&iacute;culo 12 del Estatuto Administrativo (DFL N&ordm; 29).</li>
+</ul>
+<p style="margin-left:14.2pt;">
+	&nbsp;</BR>
+<ul>
+	<li>
+		Disponibilidad Inmediata.</li>
+</ul>
+<p style="margin-left:14.2pt;">
+	&nbsp;</BR>
+</li></ul></li><br/>&nbsp;<br/></span>
+                        </ul>
+                     </div>
+                     <div>
+                        <span id="lblTitulo" class="e01_txtGris02">Perfil del Cargo</span>
+                        <span id="lblTexto" class="e01_txtNegro01"><font color="Gray"></font></span>
+                        <ul class="e05_form1Columna">
+                            <span id="lblFormacion"><li style="width:590px; font-size:11px;"><ul class="e05_form1Columna"><li><b>Formación Educacional</b><br />
+	<strong>T&eacute;cnico de Nivel Superior con menci&oacute;n en Administraci&oacute;n o Recursos Humanos.</strong></BR>
+</li></ul></li><br/>&nbsp;<br/></span>
+                            <span id="lblEspecializaciones"></span>
+                            <span id="lblExperiencias"><li style="width:590px; font-size:11px;"><ul class="e05_form1Columna"><li><b>Experiencia sector público / sector privado</b><br />
+	Experiencia en el &aacute;rea</BR>
+</li></ul></li><br/>&nbsp;<br/></span>
+                            <span id="lblCompetencias"></span>
+                        </ul>
+                     </div>
+                     <div>
+                        <span id="lblTituloCriterio" class="e01_txtGris02">Mecanismo de Postulación</span>
+                        <span id="lblCriterio"><ul class="e05_form1Columna"><li style="width:570px; font-size:11px;">
+	Si re&uacute;ne los requisitos descritos, deber&aacute; ingresar su curr&iacute;culum en la p&aacute;gina <a href="http://www.laborum.cl">www.laborum.cl</a>, &ldquo;pesta&ntilde;a postulante&rdquo; o pinchar el siguiente link:</BR>
+
+	<strong><a href="http://www.laborum.cl/v4oferta.html?3flg-so2p">http://www.laborum.cl/v4oferta.html?3flg-so2p</a></strong></BR>
+</li><br/></ul></span>
+                        <span id="lblContexto"></span>
+                     </div>
+                     <div style="clear:both;"></div> 
+                     
+                     
+                     
+                     <div style="clear:both;"></div> 
+                     <div>
+                        <span id="Label1" class="e01_txtGris02"></span>
+                        <span id="lblPreguntasDatos"></span>
+                     </div>
+                     <div>
+                         <span id="lblPreguntas" class="e01_txtGris02"></span>
+                         <div>
+
+</div>
+                        <span id="lblTituloCalendarizacion" class="e01_txtGris02">Calendarización del Proceso</span>
+                        <span id="lblCalendarizacion"><br /><ul class="e05_form1Columna"><li style="font-size:11px;"><table border='1' cellspacing='0'><tr><td >Fase</td><td>Fechas </td></tr><tr><td colspan='2'><b>Postulación</b></td></tr><tr><td >Difusión y Plazo de Postulación</td><td>03/05/2013-09/05/2013</td></tr><tr><td colspan='2'><b>Selección</b></td></tr><tr><td >Proceso de Evaluación y Selección del Postulante</td><td>10/05/2013-09/06/2013</td></tr><tr><td colspan='2'><b>Finalización</b></td></tr><tr><td >Finalización del Proceso</td><td>10/06/2013-14/06/2013</td></tr></table></li><li style="font-size:11px;"><br/>El plazo para recibir postulaciones es hasta las <b>23:59</b> horas del <b>09/05/2013</b>.</li><br />&nbsp;<br /><li style="font-size:11px;"><b>Correo de Consultas</b><br/>vcardenas@dgac.cl</li><br />&nbsp;<br /><li style="font-size:11px;"><b>URL donde se podrán obtener mayores antecedentes del proceso</b><br/><a href="http://www.laborum.cl/v4oferta.html?3flg-so2p" target="_blank">http://www.laborum.cl/v4oferta.html?3flg-so2p</a></li><br />&nbsp;<br /></ul></span>
+                    </div>
+                    <div class="e01_espacio20"></div>
+                </div>
+                
+                <div class="e80_pant02Centro" style="width:590px; height:auto; padding:10px; border:solid 2px #ccc; border-top:none; color:#996666; font-size:10px; font-weight:bold;  margin:0px 45px;">
+                    <!--Este tipo de publicación no permite postular en línea, ya que el Portal de Empleos Públicos es utilizado sólo como medio complementario de difusión de la convocatoria y no como medio de postulación.  En este contexto, esta publicación, no contiene necesariamente toda la información del proceso, por lo que la persona interesada debe consultar mayores antecedentes directamente al Servicio Público responsable del aviso.-->
+                    Aviso Pizarrón: es un tipo de  publicación que no permite postular en línea, ya que el Portal de Empleos Públicos es utilizado sólo como medio complementario de difusión de la convocatoria y no como medio de postulación. En este contexto, esta publicación, no contiene necesariamente toda la información del proceso, por lo que la persona interesada debe consultar mayores antecedentes directamente al Servicio Público responsable del aviso.
+                    <br/>&nbsp;<br/>
+                    Las condiciones y contenidos especificados en esta publicación son determinados por el servicio público convocante. Asimismo, el desarrollo del proceso de selección es de su exclusiva responsabilidad.
+                </div>
+                <div class="e01_espacio20"></div>
+                <div class="e01_espacio20"></div>
+            </div>
+            <div class="e01_espacio20"></div>
+            <div class="e01_espacio20"></div>
+        </div>
+    </div>  
+                
+    </form>
+  
+<script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-10130302-1"); pageTracker._trackPageview(); } catch (err) { }</script>  
+    
+</body>
+</html>

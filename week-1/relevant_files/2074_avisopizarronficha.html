@@ -1,0 +1,362 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"4ea0272bae","applicationID":"7185733","transactionName":"M1RTNkVWCEYDVxJfVgoecDFnGBZAABsFWVcSXlIDQ1gUXANHSVdPDUJeEl5NB0cQWwhQUAdZUExWRBZN","queueTime":0,"applicationTime":78,"ttGuid":"1D8203C34908344E","agent":""}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><link rel="shortcut icon" href="../../imagenes/favicon.ico" /><link rel="shortcut icon" href="../../imagenes/favicon.png" /><meta name="description" content="Sistema de Postulación en Línea" /><meta name="keywords" content="Sistema de Postulación en Línea" /><title>
+	Sistema de Postulación en Línea - Listado de Convocatorias
+</title><link rel="stylesheet" type="text/css" href="../../css/pub/e01_global.css" media="screen" /><link rel="stylesheet" type="text/css" href="../../css/pub/e02_cabecera.css" media="screen" /><link rel="stylesheet" type="text/css" href="../../css/pub/e03_forms.css" media="screen" /><link rel="stylesheet" type="text/css" href="../../css/pub/e04_inicio.css" media="screen" /><link rel="stylesheet" type="text/css" href="../../css/pub/e05_contenidos.css" media="screen" /><link rel="stylesheet" type="text/css" href="../../css/e05_forms.css" /><link rel="stylesheet" type="text/css" href="../../css/e06_inicio.css" /><link rel="stylesheet" type="text/css" href="../../css/e07_listados.css" /><link rel="stylesheet" type="text/css" href="../../css/e80_pantalla01.css" /><link rel="stylesheet" type="text/css" href="../../css/e10_toolTip.css" /><link rel="stylesheet" type="text/css" href="../../css/e08_greybox.css" /><link rel="stylesheet" type="text/css" href="../../css/e09_lightbox.css" media="screen" />
+    <script type="text/javascript">
+        var GB_ROOT_DIR = "../../scripts/";
+    </script>
+    <script type="text/javascript" src="../../scripts/AJS.js"></script>
+    <script type="text/javascript" src="../../scripts/AJS_fx.js"></script>
+    <script type="text/javascript" src="../../scripts/gb_scripts.js"></script>
+    <script type="text/javascript" src="../../scripts/prototype.js"></script>
+    
+    <script type="text/javascript" src="../../scripts/printpage.js"></script>
+
+</head>
+<body style='min-width:735px !important;'>
+    <form name="form1" method="post" action="avisopizarronficha.aspx?i=2074" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D3C72937" />
+<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+
+    <div class="e80_pant02Centro" style="width:732px; float:left; top:0px;">
+        <div class="e04_ventana01" style="width:732px;">
+            <div class="e04_cuerpo03" style="width:732px; height:auto; left:0px;" >
+                <span id="panelEstado"></span>
+                
+                <div id="panelFicha" class="e80_pant02Centro" style="width:590px; padding:10px; border:solid 2px #ccc; margin:0px 45px;">
+                
+                    <div>
+                        <span id="lblAvisoTrabajo" class="e01_txtGris02">Aviso Pizarrón: Proceso de Selección</span>
+                        <span id="lblAvisoTrabajoDatos"><ul class="e05_form2Columnas"><li style="font-size:11px;"><b>Ministerio</b><br />Ministerio del Medio Ambiente</li><li style="font-size:11px;"><b>Institución / Entidad</b><br />Subsecretaría del Medio Ambiente / </li><li style="font-size:11px;"><b>Cargo</b><br />Profesional Sistema de Información Ambiental. División de Estudios</li><li style="font-size:11px;"><b>Nº de Vacantes</b><br />1</li><li style="font-size:11px;"><b>Área de Trabajo</b><br />Area para cumplir misión institucional</li><li style="font-size:11px;"><b>Región</b><br />Metropolitana</li><li style="font-size:11px;"><b>Ciudad</b><br />santiago</li><li style="font-size:11px;"><b>Tipo de Vacante</b><br />Honorarios</li><li style="font-size:11px;"><ul class="e05_form1Columna"><li><b>Renta Bruta</b><br />1.260.000</li></ul></li><br/>&nbsp;<br/><li style="width:570px; font-size:11px;"><ul class="e05_form1Columna"><li><b>Objetivo del Cargo</b><br />
+	Coordinar la informaci&oacute;n ambiental generada y articulada en el Departamento de Estad&iacute;stica e Informaci&oacute;n Ambiental, a nivel institucional e inter-institucional. Asimismo, coordinar el desarrollo de nuevos indicadores y estad&iacute;sticas ambientales.</BR>
+</li></ul></li><br/>&nbsp;<br/></ul></span>
+                        <ul class="e05_form1Columna">
+                            <span id="lblArea"></span>
+                            <span id="lblDescripcion"></span>
+                        </ul>
+                     </div>
+                     <div style="clear:both;"></div>
+                     <div>
+                        <ul class="e05_form1Columna">
+                            <span id="lblRequisitos"><li style="width:570px; font-size:11px;"><ul class="e05_form1Columna"><li><br/><b>Requisitos Generales / Específicos</b><br />
+	&nbsp;</BR>
+<table border="1" cellpadding="0" cellspacing="0">
+	<tbody>
+		<tr>
+			<td style="width: 179px">
+				
+					<strong>Nacionalidad</strong></BR>
+			</td>
+			<td style="width: 425px">
+				
+					Chileno/a.</BR>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 179px">
+				
+					<strong>Edad</strong></BR>
+			</td>
+			<td style="width: 425px">
+				
+					Mayor de 18 a&ntilde;os.</BR>
+			</td>
+		</tr>
+		<tr>
+			<td style="width: 179px">
+				
+					<strong>Estamento&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong></BR>
+			</td>
+			<td style="width: 425px">
+				
+					Profesional.</BR>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+	&nbsp;</BR>
+</li></ul></li><br/>&nbsp;<br/></span>
+                        </ul>
+                     </div>
+                     <div>
+                        <span id="lblTitulo" class="e01_txtGris02">Perfil del Cargo</span>
+                        <span id="lblTexto" class="e01_txtNegro01"><font color="Gray"></font></span>
+                        <ul class="e05_form1Columna">
+                            <span id="lblFormacion"><li style="width:590px; font-size:11px;"><ul class="e05_form1Columna"><li><b>Formación Educacional</b><br />
+	&nbsp;</BR>
+<table border="1" cellpadding="0" cellspacing="0">
+	<tbody>
+		<tr>
+			<td style="width: 179px; height: 26px">
+				<strong>Carreras Sugeridas</strong></td>
+			<td style="width: 425px; height: 26px">
+				Ingenier&iacute;a Civil Industrial, Ingenier&iacute;a Civil en Geograf&iacute;a, Geograf&iacute;a, Ingenier&iacute;a Forestal, Agronom&iacute;a, Ingenier&iacute;a Ambiental, Ingenier&iacute;a en Recursos Naturales.</td>
+		</tr>
+	</tbody>
+</table>
+
+	&nbsp;</BR>
+</li></ul></li><br/>&nbsp;<br/></span>
+                            <span id="lblEspecializaciones"><li style="width:590px; font-size:11px;"><ul class="e05_form1Columna"><li><b>Especialización y/o Capacitación</b><br />
+	&nbsp;</BR>
+<table border="1" cellpadding="0" cellspacing="0">
+	<tbody>
+		<tr>
+			<td style="width: 179px; height: 55px">
+				<strong>Conocimientos Espec&iacute;ficos</strong></td>
+			<td style="width: 425px; height: 55px">
+				<strong>Transversales:<br />
+				- </strong>Manejo de herramientas de inform&aacute;tica de Microsoft Office y/o similar.<br />
+				-&nbsp; Desarrollo e implementaci&oacute;n de proyectos.&nbsp;<br />
+				<br />
+				<strong>Especificas al &Aacute;rea:<br />
+				- </strong>Capacidad para la elaboraci&oacute;n de protocolo y manuales de procedimiento.<br />
+				- Manejo de Base de datos (SQL, Access, SPSS, entre otros)<br />
+				- Nivel avanzado en Excel.</td>
+		</tr>
+		<tr>
+			<td style="width: 179px; height: 28px">
+				<strong>Dominio de idioma</strong></td>
+			<td style="width: 425px; height: 28px">
+				Ingl&eacute;s Medio.</td>
+		</tr>
+	</tbody>
+</table>
+
+	&nbsp;</BR>
+</li></ul></li><br/>&nbsp;<br/></span>
+                            <span id="lblExperiencias"><li style="width:590px; font-size:11px;"><ul class="e05_form1Columna"><li><b>Experiencia sector público / sector privado</b><br />
+	&nbsp;</BR>
+<table border="1" cellpadding="0" cellspacing="0">
+	<tbody>
+		<tr>
+			<td style="width: 170px; height: 45px">
+				<p align="center">
+					<strong>Funciones Generales del Cargo</strong></BR>
+			</td>
+			<td style="width: 151px; height: 45px">
+				<p align="center">
+					<strong>Actividades a Desempe&ntilde;ar por Funciones</strong></BR>
+			</td>
+			<td colspan="2" style="width: 284px; height: 45px">
+				<p align="center">
+					<strong>Criterios de Desempe&ntilde;o </strong>(Conductas Asociadas al cumplimiento de las Actividades)</BR>
+			</td>
+		</tr>
+		<tr>
+			<td rowspan="6" style="width: 170px; height: 51px">
+				Coordinar la informaci&oacute;n ambiental generada y articulada en el Departamento de Estad&iacute;stica e Informaci&oacute;n Ambiental, a nivel institucional e inter-institucional<strong>.</strong></td>
+			<td rowspan="6" style="width: 151px; height: 51px">
+				Coordinando el comit&eacute; ministerial e interinstitucional de informaci&oacute;n ambiental.<br />
+				&nbsp;</td>
+			<td colspan="2" style="width: 284px; height: 51px">
+				Gestionando el Comit&eacute; Institucional de Informaci&oacute;n Ambiental y el Comit&eacute; Interinstitucional de Informaci&oacute;n Ambiental.</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="width: 284px; height: 37px">
+				Coordinando las reuniones peri&oacute;dicas para dar cuenta del estado de los proyectos de informaci&oacute;n ambiental.</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="width: 284px; height: 34px">
+				Generando las actas de reuniones, que incluyen la discusi&oacute;n de temas relevantes, los acuerdos y conclusiones<strong>.</strong></td>
+		</tr>
+		<tr>
+			<td colspan="2" style="width: 284px; height: 26px">
+				Presentando y proponiendo la agenda de los diferentes temas relativos a informaci&oacute;n ambiental<strong>.</strong></td>
+		</tr>
+		<tr>
+			<td colspan="2" style="width: 284px; height: 29px">
+				Manteniendo la base de datos de contacto actualizada para la fluida comunicaci&oacute;n entre las partes<strong>.</strong></td>
+		</tr>
+		<tr>
+			<td colspan="2" style="width: 284px; height: 29px">
+				Elaborando los planes de trabajo .del comit&eacute; ministerial e interinstitucional de informaci&oacute;n ambiental para su sanci&oacute;n.</td>
+		</tr>
+		<tr>
+			<td rowspan="6" style="width: 170px; height: 28px">
+				Contribuir a la elaboraci&oacute;n de indicadores ambientales que den cuenta de la situaci&oacute;n del estado del medio ambiente, para ser incluidos en el Informe y Reportes del Estado del Medio Ambiente.</td>
+			<td rowspan="3" style="width: 151px; height: 28px">
+				Identificando informaci&oacute;n relevante para dar cuenta del estado del medio ambiente.</td>
+			<td style="width: 284px; height: 28px">
+				Trabajando coordinadamente con el Comit&eacute; de Informaci&oacute;n Ministerial y el Interinstitucional.</td>
+			<td>
+				&nbsp;</td>
+		</tr>
+		<tr>
+			<td style="width: 284px; height: 46px">
+				Revisando y analizando informaci&oacute;n ambiental del Ministerio y de otros sectores.</td>
+			<td>
+				&nbsp;</td>
+		</tr>
+		<tr>
+			<td style="width: 284px; height: 46px">
+				Participando en seminarios y talleres relacionados a la informaci&oacute;n ambiental.</td>
+			<td>
+				&nbsp;</td>
+		</tr>
+		<tr>
+			<td rowspan="3" style="width: 151px; height: 46px">
+				Mejorando capacidades relevantes para la construcci&oacute;n de indicadores.</td>
+			<td style="width: 284px; height: 46px">
+				Participando en capacitaciones relacionadas con indicadores, ya sea a nivel nacional o internacional.</td>
+			<td>
+				&nbsp;</td>
+		</tr>
+		<tr>
+			<td style="width: 284px; height: 46px">
+				Recogiendo experiencias de otros pa&iacute;ses en el tratamiento y construcci&oacute;n de indicadores ambientales.</td>
+			<td>
+				&nbsp;</td>
+		</tr>
+		<tr>
+			<td style="width: 284px; height: 46px">
+				Manteniendo contacto con otros pa&iacute;ses que dispongan de indicadores ambientales.</td>
+			<td>
+				&nbsp;</td>
+		</tr>
+		<tr>
+			<td rowspan="8" style="width: 170px; height: 28px">
+				Coordinar el desarrollo de nuevos indicadores y estad&iacute;sticas ambientales.</td>
+			<td rowspan="3" style="width: 151px; height: 28px">
+				Coordinando y/o apoyando proyectos de Captura, Integraci&oacute;n y/o Difusi&oacute;n que defina la Jefatura del Departamento de Estad&iacute;stica e Informaci&oacute;n Ambiental</td>
+			<td style="width: 284px; height: 28px">
+				Gestionando el desarrollo de consultor&iacute;as o proyectos de sistemas internos del MMA o externos (Generando TDR, seguimiento y desarrollo de consultor&iacute;as)</td>
+			<td>
+				&nbsp;</td>
+		</tr>
+		<tr>
+			<td style="width: 284px; height: 46px">
+				Apoyando el desarrollo de consultor&iacute;as de sistemas internos del MMA o externos.</td>
+			<td>
+				&nbsp;</td>
+		</tr>
+		<tr>
+			<td style="width: 284px; height: 46px">
+				Apoyando el desarrollo de proyectos de sistemas internos del MMA o externos.</td>
+			<td>
+				&nbsp;</td>
+		</tr>
+		<tr>
+			<td rowspan="5" style="width: 151px; height: 46px">
+				Coordinando el proyecto &quot;&Iacute;ndice de Comportamiento Ambiental&quot;</td>
+			<td style="width: 284px; height: 46px">
+				Supervisando la consultor&iacute;a que realiza el proyecto &ldquo;&quot;&Iacute;ndice de Comportamiento Ambiental&quot;.</td>
+			<td>
+				&nbsp;</td>
+		</tr>
+		<tr>
+			<td style="width: 284px; height: 46px">
+				Convocando a la contraparte t&eacute;cnica de a consultor&iacute;a que realiza el proyecto &ldquo;&Iacute;ndice de Comportamiento Ambiental&quot;.</td>
+			<td>
+				&nbsp;</td>
+		</tr>
+		<tr>
+			<td style="width: 284px; height: 46px">
+				Convocando a talleres con especialistas el comportamiento ambiental, para validar el modelo y el &iacute;ndice propuesto.</td>
+			<td>
+				&nbsp;</td>
+		</tr>
+		<tr>
+			<td style="width: 284px; height: 46px">
+				Difundiendo los resultados del proyecto, e incorpor&aacute;ndolo en el SINIA.</td>
+			<td>
+				&nbsp;</td>
+		</tr>
+		<tr>
+			<td style="width: 284px; height: 46px">
+				Replicando esta experiencia en otras regiones del pa&iacute;s.</td>
+			<td>
+				&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+
+	&nbsp;</BR>
+</li></ul></li><br/>&nbsp;<br/></span>
+                            <span id="lblCompetencias"><li style="width:590px; font-size:11px;"><ul class="e05_form1Columna"><li><b>Competencias</b><br />
+	&nbsp;</BR>
+<p style="margin-left:-7.1pt;">
+	<strong>COMPETENCIAS INSTITUCIONALES</strong></BR>
+<p style="margin-left:-7.1pt;">
+	Orientaci&oacute;n a resultados:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Enfoca sus esfuerzos hacia el cumplimiento de los objetivos organizacionales y metas establecidas, con un claro dominio de la visi&oacute;n, misi&oacute;n y lineamientos del Ministerio. Gestiona de manera eficiente los recursos disponibles, considerando los costos, beneficios y la calidad de los servicios entregados a sus distintos usuarios.</BR>
+<p style="margin-left:-7.1pt;">
+	Comunicaci&oacute;n efectiva:&nbsp;&nbsp; Es capaz de establecer y mantener una comunicaci&oacute;n asertiva con diferentes interlocutores, demostrando habilidades para adaptar su lenguaje y escuchar activamente, logrando establecer di&aacute;logos eficientes y orientados a la acci&oacute;n.</BR>
+<p style="margin-left:-7.1pt;">
+	Foco en el usuario: Muestra una orientaci&oacute;n y preocupaci&oacute;n continua por entregar respuestas, servicios&nbsp; y alternativas satisfactorias a las necesidades (actuales y futuras) de los usuarios del Ministerio (funcionarios internos, ciudadan&iacute;a y otros servicios p&uacute;blicos), obteniendo un beneficio mutuo de las partes implicadas.</BR>
+<p style="margin-left:-7.1pt;">
+	Adaptaci&oacute;n al cambio: Demuestra capacidad para ajustar el comportamiento y desempe&ntilde;o personal para trabajar eficiente y efectivamente frente a situaciones de cambio (nuevos lineamientos, liderazgos u objetivos).</BR>
+<p style="margin-left:-7.1pt;">
+	<strong>COMPETENCIAS FUNCIONALES</strong></BR>
+<p style="margin-left:-7.1pt;">
+	Asesor&iacute;a:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Transmite sus conocimientos t&eacute;cnicos y la experiencia adquirida, haci&eacute;ndolos comprensibles y pr&aacute;cticos para los usuarios internos del Ministerio. Apoya la toma de decisiones mediante un rol de referente t&eacute;cnico y asistente experto en las materias de su competencia.</BR>
+<p style="margin-left:-7.1pt;">
+	Aprendizaje continuo:&nbsp;&nbsp;&nbsp;&nbsp; Identifica sus fortalezas y debilidades individuales, necesidades de desarrollo y las circunstancias cambiantes del entorno, orient&aacute;ndolas hacia la mejora del desempe&ntilde;o personal y organizacional.</BR>
+</li></ul></li><br/>&nbsp;<br/></span>
+                        </ul>
+                     </div>
+                     <div>
+                        <span id="lblTituloCriterio" class="e01_txtGris02">Mecanismo de Postulación</span>
+                        <span id="lblCriterio"><ul class="e05_form1Columna"><li style="width:570px; font-size:11px;">
+	&nbsp;</BR>
+<p style="margin-left:36.0pt;">
+	<strong>Para postular al presente cargo, solo se recibir&aacute;n curr&iacute;culum vitae y fotocopia simple del titulo profesional&nbsp;al correo&nbsp;</strong><a href="mailto:seleccion@mma.gob.cl">seleccion@mma.gob.cl</a>&nbsp;<strong>detallando</strong>&nbsp;<strong>en el asunto&nbsp;<u>&quot;Profesional SINIA&quot;</u>.</strong><br />
+	<br />
+	Se recibir&aacute;n antecedentes hasta el Martes 21 &nbsp;de&nbsp;Mayo a las 23:59 horas.<br />
+	<br />
+	A partir del&nbsp;miercoles 22 de abril, se realizar&aacute; evaluaci&oacute;n curricular a fin de dar continuidad a las siguientes etapas del proceso, llamando v&iacute;a correo electr&oacute;nico, a participar a la primera etapa de selecci&oacute;n a los postulantes que cumplan con lo requerido en el perfil.<br />
+	&nbsp;<br />
+	<strong><em><u>Las etapas del Proceso se llevar&aacute;n a cabo &uacute;nicamente en las ciudad de Santiago.</u></em></strong></BR>
+<p style="margin-left:36.0pt;">
+	&nbsp;&nbsp;<br />
+	El presente proceso es por&nbsp;<u>Contrataci&oacute;n Directa</u>, por lo que no nos encontramos sujetos a la definici&oacute;n de Bases y no se llevar&aacute; un registro en la p&aacute;gina web institucional.</BR>
+</li><br/></ul></span>
+                        <span id="lblContexto"></span>
+                     </div>
+                     <div style="clear:both;"></div> 
+                     
+                     
+                     
+                     <div style="clear:both;"></div> 
+                     <div>
+                        <span id="Label1" class="e01_txtGris02"></span>
+                        <span id="lblPreguntasDatos"></span>
+                     </div>
+                     <div>
+                         <span id="lblPreguntas" class="e01_txtGris02"></span>
+                         <div>
+
+</div>
+                        <span id="lblTituloCalendarizacion" class="e01_txtGris02">Calendarización del Proceso</span>
+                        <span id="lblCalendarizacion"><br /><ul class="e05_form1Columna"><li style="font-size:11px;"><table border='1' cellspacing='0'><tr><td >Fase</td><td>Fechas </td></tr><tr><td colspan='2'><b>Postulación</b></td></tr><tr><td >Difusión y Plazo de Postulación</td><td>16/05/2013-21/05/2013</td></tr><tr><td colspan='2'><b>Selección</b></td></tr><tr><td >Proceso de Evaluación y Selección del Postulante</td><td>22/05/2013-12/06/2013</td></tr><tr><td colspan='2'><b>Finalización</b></td></tr><tr><td >Finalización del Proceso</td><td>13/06/2013-21/06/2013</td></tr></table></li><li style="font-size:11px;"><br/>El plazo para recibir postulaciones es hasta las <b>23:59</b> horas del <b>21/05/2013</b>.</li><br />&nbsp;<br /><li style="font-size:11px;"><b>Correo de Consultas</b><br/>seleccion@mma.gob.cl</li><br />&nbsp;<br /></ul></span>
+                    </div>
+                    <div class="e01_espacio20"></div>
+                </div>
+                
+                <div class="e80_pant02Centro" style="width:590px; height:auto; padding:10px; border:solid 2px #ccc; border-top:none; color:#996666; font-size:10px; font-weight:bold;  margin:0px 45px;">
+                    <!--Este tipo de publicación no permite postular en línea, ya que el Portal de Empleos Públicos es utilizado sólo como medio complementario de difusión de la convocatoria y no como medio de postulación.  En este contexto, esta publicación, no contiene necesariamente toda la información del proceso, por lo que la persona interesada debe consultar mayores antecedentes directamente al Servicio Público responsable del aviso.-->
+                    Aviso Pizarrón: es un tipo de  publicación que no permite postular en línea, ya que el Portal de Empleos Públicos es utilizado sólo como medio complementario de difusión de la convocatoria y no como medio de postulación. En este contexto, esta publicación, no contiene necesariamente toda la información del proceso, por lo que la persona interesada debe consultar mayores antecedentes directamente al Servicio Público responsable del aviso.
+                    <br/>&nbsp;<br/>
+                    Las condiciones y contenidos especificados en esta publicación son determinados por el servicio público convocante. Asimismo, el desarrollo del proceso de selección es de su exclusiva responsabilidad.
+                </div>
+                <div class="e01_espacio20"></div>
+                <div class="e01_espacio20"></div>
+            </div>
+            <div class="e01_espacio20"></div>
+            <div class="e01_espacio20"></div>
+        </div>
+    </div>  
+                
+    </form>
+  
+<script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-10130302-1"); pageTracker._trackPageview(); } catch (err) { }</script>  
+    
+</body>
+</html>

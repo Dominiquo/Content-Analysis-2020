@@ -1,0 +1,116 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"4ea0272bae","applicationID":"7185733","transactionName":"M1RTNkVWCEYDVxJfVgoecDFnGBZAABsFWVcSXlIDQ1gUXANHSVdPDUJeEl5NB0cQWwhQUAdZUExWRBZN","queueTime":0,"applicationTime":20,"ttGuid":"5CC3A93975AA1C2A","agent":""}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><link rel="shortcut icon" href="../../imagenes/favicon.ico" /><link rel="shortcut icon" href="../../imagenes/favicon.png" /><meta name="description" content="Sistema de Postulación en Línea" /><meta name="keywords" content="Sistema de Postulación en Línea" /><title>
+	Sistema de Postulación en Línea - Listado de Convocatorias
+</title><link rel="stylesheet" type="text/css" href="../../css/pub/e01_global.css" media="screen" /><link rel="stylesheet" type="text/css" href="../../css/pub/e02_cabecera.css" media="screen" /><link rel="stylesheet" type="text/css" href="../../css/pub/e03_forms.css" media="screen" /><link rel="stylesheet" type="text/css" href="../../css/pub/e04_inicio.css" media="screen" /><link rel="stylesheet" type="text/css" href="../../css/pub/e05_contenidos.css" media="screen" /><link rel="stylesheet" type="text/css" href="../../css/e05_forms.css" /><link rel="stylesheet" type="text/css" href="../../css/e06_inicio.css" /><link rel="stylesheet" type="text/css" href="../../css/e07_listados.css" /><link rel="stylesheet" type="text/css" href="../../css/e80_pantalla01.css" /><link rel="stylesheet" type="text/css" href="../../css/e10_toolTip.css" /><link rel="stylesheet" type="text/css" href="../../css/e08_greybox.css" /><link rel="stylesheet" type="text/css" href="../../css/e09_lightbox.css" media="screen" />
+    <script type="text/javascript">
+        var GB_ROOT_DIR = "../../scripts/";
+    </script>
+    <script type="text/javascript" src="../../scripts/AJS.js"></script>
+    <script type="text/javascript" src="../../scripts/AJS_fx.js"></script>
+    <script type="text/javascript" src="../../scripts/gb_scripts.js"></script>
+    <script type="text/javascript" src="../../scripts/prototype.js"></script>
+    
+    <script type="text/javascript" src="../../scripts/printpage.js"></script>
+
+</head>
+<body style='min-width:735px !important;'>
+    <form name="form1" method="post" action="avisopizarronficha.aspx?i=1981" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D3C72937" />
+<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+
+    <div class="e80_pant02Centro" style="width:732px; float:left; top:0px;">
+        <div class="e04_ventana01" style="width:732px;">
+            <div class="e04_cuerpo03" style="width:732px; height:auto; left:0px;" >
+                <span id="panelEstado"></span>
+                
+                <div id="panelFicha" class="e80_pant02Centro" style="width:590px; padding:10px; border:solid 2px #ccc; margin:0px 45px;">
+                
+                    <div>
+                        <span id="lblAvisoTrabajo" class="e01_txtGris02">Aviso Pizarrón: Concurso de Jefe de Departamento</span>
+                        <span id="lblAvisoTrabajoDatos"><ul class="e05_form2Columnas"><li style="font-size:11px;"><b>Ministerio</b><br />Ministerio de Hacienda</li><li style="font-size:11px;"><b>Institución / Entidad</b><br />Servicio de Impuestos Internos SII / </li><li style="font-size:11px;"><b>Cargo</b><br />Jefe(a) de Departamento Fiscalización Grandes Empresas Internacionales Dirección de Grandes Contribuyentes</li><li style="font-size:11px;"><b>Nº de Vacantes</b><br />1</li><li style="font-size:11px;"><b>Área de Trabajo</b><br />Area para cumplir misión institucional</li><li style="font-size:11px;"><b>Región</b><br />Metropolitana</li><li style="font-size:11px;"><b>Ciudad</b><br />Santiago</li><li style="font-size:11px;"><b>Tipo de Vacante</b><br />Planta</li><li>&nbsp;<br /></li><li style="width:570px; font-size:11px;"><ul class="e05_form1Columna"><li><b>Objetivo del Cargo</b><br /><p style="text-align: justify">
+	<span style="font-size: 11px">Desarrollar labores propias del cargo Jefe de Departamento Fiscalizaci&oacute;n de&nbsp;G<font face="Arial"><font face="Arial">randes Empresas Internacionales de la Direcci&oacute;n de Grandes Contribuyentes.</font></font></span></BR>
+</li></ul></li><br/>&nbsp;<br/></ul></span>
+                        <ul class="e05_form1Columna">
+                            <span id="lblArea"></span>
+                            <span id="lblDescripcion"></span>
+                        </ul>
+                     </div>
+                     <div style="clear:both;"></div>
+                     <div>
+                        <ul class="e05_form1Columna">
+                            <span id="lblRequisitos"><li style="width:570px; font-size:11px;"><ul class="e05_form1Columna"><li><br/><b>Requisitos Generales / Específicos</b><br /><p style="text-align: justify">
+	<span style="font-size: 11px">1. Los&nbsp;establecidos&nbsp;en el Art. 2&deg; N&deg; 1, del D.F.L. N&deg; 1, de 2004, del Ministerio de Hacienda.<br />
+	2.&nbsp;Encontrarse calificado en lista N&deg; 1, de distinci&oacute;n.<br />
+	3. Ser funcionario de planta o a contrata de alg&uacute;n Ministerio y/o Servicio regido por el Estatuto Administrativo. Los empleados a contrata, deber&aacute;n contar con al menos tres a&ntilde;os en tal calidad.<br />
+	4. No estar afecto a las inhabilidades establecidas en el art&iacute;culo 47 del Decreto N&deg; 69 de 2004, del Ministerio de Hacienda.<br />
+	5.&nbsp; No estar afecto a los impedimentos a que se refiere el art&iacute;culo 54 del D.F.L. N&deg; 1-19653, que fija Texto Refundido, Coordinado y Sistematizado de la Ley N&deg; 18.575.<br />
+	6. Los exigidos por el Art. 12 de la Ley N&deg; 18.834 de 1989 sobre Estatuto Administrativo</span></BR>
+</li></ul></li><br/>&nbsp;<br/></span>
+                        </ul>
+                     </div>
+                     <div>
+                        <span id="lblTitulo" class="e01_txtGris02"></span>
+                        <span id="lblTexto" class="e01_txtNegro01"><font color="Gray"></font></span>
+                        <ul class="e05_form1Columna">
+                            <span id="lblFormacion"></span>
+                            <span id="lblEspecializaciones"></span>
+                            <span id="lblExperiencias"></span>
+                            <span id="lblCompetencias"></span>
+                        </ul>
+                     </div>
+                     <div>
+                        <span id="lblTituloCriterio" class="e01_txtGris02">Mecanismo de Postulación</span>
+                        <span id="lblCriterio"><ul class="e05_form1Columna"><li style="width:570px; font-size:11px;"><p style="text-align: justify">
+	<span style="font-size: 11px">El mecanismo de postulaci&oacute;n est&aacute; se&ntilde;alado en las bases de concursos, diponibles en <a href="http://www.sii.cl/pagina/actualizada/concurso/en_postulacion.htm">http://www.sii.cl/pagina/actualizada/concurso/en_postulacion.htm</a></span></BR>
+</li><br/></ul></span>
+                        <span id="lblContexto"></span>
+                     </div>
+                     <div style="clear:both;"></div> 
+                     
+                     
+                     
+                     <div style="clear:both;"></div> 
+                     <div>
+                        <span id="Label1" class="e01_txtGris02"></span>
+                        <span id="lblPreguntasDatos"></span>
+                     </div>
+                     <div>
+                         <span id="lblPreguntas" class="e01_txtGris02"></span>
+                         <div>
+
+</div>
+                        <span id="lblTituloCalendarizacion" class="e01_txtGris02">Calendarización del Proceso</span>
+                        <span id="lblCalendarizacion"><br /><ul class="e05_form1Columna"><li style="font-size:11px;"><table border='1' cellspacing='0'><tr><td >Fase</td><td>Fechas </td></tr><tr><td colspan='2'><b>Postulación</b></td></tr><tr><td >Difusión y Plazo de Postulación</td><td>02/05/2013-15/05/2013</td></tr><tr><td colspan='2'><b>Selección</b></td></tr><tr><td >Proceso de Evaluación y Selección del Postulante</td><td>16/05/2013-11/07/2013</td></tr><tr><td colspan='2'><b>Finalización</b></td></tr><tr><td >Finalización del Proceso</td><td>12/07/2013-11/06/2013</td></tr></table></li><li style="font-size:11px;"><br/>El plazo para recibir postulaciones es hasta las <b>17:00</b> horas del <b>15/05/2013</b>.</li><br />&nbsp;<br /><li style="font-size:11px;"><b>Correo de Consultas</b><br/>maria.rojas@sii.cl</li><br />&nbsp;<br /><li style="font-size:11px;"><b>URL donde se podrán obtener mayores antecedentes del proceso</b><br/><a href="http://www.sii.cl/documentos/resoluciones/2013/reso5342.pdf" target="_blank">http://www.sii.cl/documentos/resoluciones/2013/reso5342.pdf</a></li><br />&nbsp;<br /><li style="width:570px; font-size:11px;"><b>Condiciones Generales</b><br />
+	Aviso transcrito del Diario Oficial N&deg; 40.548, de fecha&nbsp;02 de mayo de 2013, Cuerpo II,&nbsp; p&aacute;gina 55</BR>
+</li><br/></ul></span>
+                    </div>
+                    <div class="e01_espacio20"></div>
+                </div>
+                
+                <div class="e80_pant02Centro" style="width:590px; height:auto; padding:10px; border:solid 2px #ccc; border-top:none; color:#996666; font-size:10px; font-weight:bold;  margin:0px 45px;">
+                    <!--Este tipo de publicación no permite postular en línea, ya que el Portal de Empleos Públicos es utilizado sólo como medio complementario de difusión de la convocatoria y no como medio de postulación.  En este contexto, esta publicación, no contiene necesariamente toda la información del proceso, por lo que la persona interesada debe consultar mayores antecedentes directamente al Servicio Público responsable del aviso.-->
+                    Aviso Pizarrón: es un tipo de  publicación que no permite postular en línea, ya que el Portal de Empleos Públicos es utilizado sólo como medio complementario de difusión de la convocatoria y no como medio de postulación. En este contexto, esta publicación, no contiene necesariamente toda la información del proceso, por lo que la persona interesada debe consultar mayores antecedentes directamente al Servicio Público responsable del aviso.
+                    <br/>&nbsp;<br/>
+                    Las condiciones y contenidos especificados en esta publicación son determinados por el servicio público convocante. Asimismo, el desarrollo del proceso de selección es de su exclusiva responsabilidad.
+                </div>
+                <div class="e01_espacio20"></div>
+                <div class="e01_espacio20"></div>
+            </div>
+            <div class="e01_espacio20"></div>
+            <div class="e01_espacio20"></div>
+        </div>
+    </div>  
+                
+    </form>
+  
+<script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-10130302-1"); pageTracker._trackPageview(); } catch (err) { }</script>  
+    
+</body>
+</html>

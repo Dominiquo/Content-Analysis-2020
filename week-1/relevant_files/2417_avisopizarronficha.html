@@ -1,0 +1,127 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"4ea0272bae","applicationID":"7185733","transactionName":"M1RTNkVWCEYDVxJfVgoecDFnGBZAABsFWVcSXlIDQ1gUXANHSVdPDUJeEl5NB0cQWwhQUAdZUExWRBZN","queueTime":0,"applicationTime":41,"ttGuid":"A59E2EC6A7EBE3D4","agent":""}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><link rel="shortcut icon" href="../../imagenes/favicon.ico" /><link rel="shortcut icon" href="../../imagenes/favicon.png" /><meta name="description" content="Sistema de Postulación en Línea" /><meta name="keywords" content="Sistema de Postulación en Línea" /><title>
+	Sistema de Postulación en Línea - Listado de Convocatorias
+</title><link rel="stylesheet" type="text/css" href="../../css/pub/e01_global.css" media="screen" /><link rel="stylesheet" type="text/css" href="../../css/pub/e02_cabecera.css" media="screen" /><link rel="stylesheet" type="text/css" href="../../css/pub/e03_forms.css" media="screen" /><link rel="stylesheet" type="text/css" href="../../css/pub/e04_inicio.css" media="screen" /><link rel="stylesheet" type="text/css" href="../../css/pub/e05_contenidos.css" media="screen" /><link rel="stylesheet" type="text/css" href="../../css/e05_forms.css" /><link rel="stylesheet" type="text/css" href="../../css/e06_inicio.css" /><link rel="stylesheet" type="text/css" href="../../css/e07_listados.css" /><link rel="stylesheet" type="text/css" href="../../css/e80_pantalla01.css" /><link rel="stylesheet" type="text/css" href="../../css/e10_toolTip.css" /><link rel="stylesheet" type="text/css" href="../../css/e08_greybox.css" /><link rel="stylesheet" type="text/css" href="../../css/e09_lightbox.css" media="screen" />
+    <script type="text/javascript">
+        var GB_ROOT_DIR = "../../scripts/";
+    </script>
+    <script type="text/javascript" src="../../scripts/AJS.js"></script>
+    <script type="text/javascript" src="../../scripts/AJS_fx.js"></script>
+    <script type="text/javascript" src="../../scripts/gb_scripts.js"></script>
+    <script type="text/javascript" src="../../scripts/prototype.js"></script>
+    
+    <script type="text/javascript" src="../../scripts/printpage.js"></script>
+
+</head>
+<body style='min-width:735px !important;'>
+    <form name="form1" method="post" action="avisopizarronficha.aspx?i=2417" id="form1">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+
+<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D3C72937" />
+<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+
+    <div class="e80_pant02Centro" style="width:732px; float:left; top:0px;">
+        <div class="e04_ventana01" style="width:732px;">
+            <div class="e04_cuerpo03" style="width:732px; height:auto; left:0px;" >
+                <span id="panelEstado"></span>
+                
+                <div id="panelFicha" class="e80_pant02Centro" style="width:590px; padding:10px; border:solid 2px #ccc; margin:0px 45px;">
+                
+                    <div>
+                        <span id="lblAvisoTrabajo" class="e01_txtGris02">Aviso Pizarrón: Proceso de Selección</span>
+                        <span id="lblAvisoTrabajoDatos"><ul class="e05_form2Columnas"><li style="font-size:11px;"><b>Ministerio</b><br />Ministerio de Energía</li><li style="font-size:11px;"><b>Institución / Entidad</b><br />Subsecretaría de Energía / </li><li style="font-size:11px;"><b>Cargo</b><br />Profesional División de Desarrollo Sustentable</li><li style="font-size:11px;"><b>Nº de Vacantes</b><br />1</li><li style="font-size:11px;"><b>Área de Trabajo</b><br />Area para cumplir misión institucional</li><li style="font-size:11px;"><b>Región</b><br />Metropolitana</li><li style="font-size:11px;"><b>Ciudad</b><br />Santiagio</li><li style="font-size:11px;"><b>Tipo de Vacante</b><br />Contrata</li><li>&nbsp;<br /></li></ul></span>
+                        <ul class="e05_form1Columna">
+                            <span id="lblArea"></span>
+                            <span id="lblDescripcion"></span>
+                        </ul>
+                     </div>
+                     <div style="clear:both;"></div>
+                     <div>
+                        <ul class="e05_form1Columna">
+                            <span id="lblRequisitos"><li style="width:570px; font-size:11px;"><ul class="e05_form1Columna"><li><br/><b>Requisitos Generales / Específicos</b><br />
+	T&iacute;tulo profesional de Ingeniero Civil, Ge&oacute;grafo, Cientista Pol&iacute;tico, Ingeniero Comercial, Ingeniero Ambiental o carreras afines a las funciones descritas.</BR>
+<div>
+	Deseable de 4 a 6 a&ntilde;os de experiencia profesional, cumpliendo con los siguientes requisitos:</div>
+<div>
+	T&iacute;tulo profesional de una carrera de, a lo menos, <strong>10 semestres de duraci&oacute;n</strong>, otorgado por una universidad o instituto profesional del Estado o reconocido por &eacute;ste o aquellos validados en Chile de acuerdo a la legislaci&oacute;n vigente y <strong>acreditar una experiencia profesional m&iacute;nima de cuatro a&ntilde;os</strong>. Los a&ntilde;os de experiencia requeridos ser&aacute;n dos en el caso de poseer un grado acad&eacute;mico de Mag&iacute;ster o Doctor; o<br />
+	<br />
+	T&iacute;tulo profesional de una carrera de, a lo menos, <strong>8 semestres de duraci&oacute;n</strong>, otorgado por una universidad o instituto profesional del Estado o reconocido por &eacute;ste o aquellos validados en Chile de acuerdo a la legislaci&oacute;n vigente y <strong>acreditar una experiencia profesional m&iacute;nima de seis a&ntilde;os</strong>. Los a&ntilde;os de experiencia requeridos ser&aacute;n cuatro en el caso de poseer un grado acad&eacute;mico de Mag&iacute;ster o Doctor.</div>
+<div>
+	&nbsp;</div>
+</li></ul></li><br/>&nbsp;<br/></span>
+                        </ul>
+                     </div>
+                     <div>
+                        <span id="lblTitulo" class="e01_txtGris02">Perfil del Cargo</span>
+                        <span id="lblTexto" class="e01_txtNegro01"><font color="Gray"></font></span>
+                        <ul class="e05_form1Columna">
+                            <span id="lblFormacion"><li style="width:590px; font-size:11px;"><ul class="e05_form1Columna"><li><b>Formación Educacional</b><br />
+	T&iacute;tulo profesional de Ingeniero Civil, Ge&oacute;grafo, Cientista Pol&iacute;tico, Ingeniero Comercial, Ingeniero Ambiental o carreras afines a las funciones descritas.</BR>
+</li></ul></li><br/>&nbsp;<br/></span>
+                            <span id="lblEspecializaciones"><li style="width:590px; font-size:11px;"><ul class="e05_form1Columna"><li><b>Especialización y/o Capacitación</b><br />
+	Deseable Pos t&iacute;tulo en Pol&iacute;ticas P&uacute;blicas<br />
+	&nbsp;</BR>
+</li></ul></li><br/>&nbsp;<br/></span>
+                            <span id="lblExperiencias"><li style="width:590px; font-size:11px;"><ul class="e05_form1Columna"><li><b>Experiencia sector público / sector privado</b><br />
+	Deseable experiencia en el sector p&uacute;blico</BR>
+</li></ul></li><br/>&nbsp;<br/></span>
+                            <span id="lblCompetencias"><li style="width:590px; font-size:11px;"><ul class="e05_form1Columna"><li><b>Competencias</b><br />
+	Trabajo en equipo, Auto-organizaci&oacute;n, Soluci&oacute;n de problemas, Trabajo Bajo presi&oacute;n.</BR>
+</li></ul></li><br/>&nbsp;<br/></span>
+                        </ul>
+                     </div>
+                     <div>
+                        <span id="lblTituloCriterio" class="e01_txtGris02">Mecanismo de Postulación</span>
+                        <span id="lblCriterio"><ul class="e05_form1Columna"><li style="width:570px; font-size:11px;">
+	Recepci&oacute;n y Registro Antecedentes a trav&eacute;s de la direcci&oacute;n electr&oacute;nica <a href="mailto:seleccion@minenergia.cl">seleccion@minenergia.cl</a>, o enviando la documentaci&oacute;n solicitada hasta las 14 hrs del 22 de Julio a la Oficina de Partes de la Subsecretar&iacute;a, ubicada en Alameda 1449 Edificio Santiago Downtown, Torre 2, piso 14.<br />
+	Mayores antecentes revisar&nbsp;<a href="http://www.minenergia.cl/ministerio/trabaje-en-energia.html">http://www.minenergia.cl/ministerio/trabaje-en-energia.html</a>&nbsp;Profesional Divisi&oacute;n de Desarrollo Sustentable.</BR>
+</li><br/></ul></span>
+                        <span id="lblContexto"><span style="font-size:11px;"><b>Documentos requeridos para postular</b></span><br />
+	Cv Ciego (Formulario de Postulaci&oacute;n) Disponible en web ministerial, banner Trabaje en Energ&iacute;a.</BR>
+<br/></span>
+                     </div>
+                     <div style="clear:both;"></div> 
+                     
+                     
+                     
+                     <div style="clear:both;"></div> 
+                     <div>
+                        <span id="Label1" class="e01_txtGris02"></span>
+                        <span id="lblPreguntasDatos"></span>
+                     </div>
+                     <div>
+                         <span id="lblPreguntas" class="e01_txtGris02"></span>
+                         <div>
+
+</div>
+                        <span id="lblTituloCalendarizacion" class="e01_txtGris02">Calendarización del Proceso</span>
+                        <span id="lblCalendarizacion"><br /><ul class="e05_form1Columna"><li style="font-size:11px;"><table border='1' cellspacing='0'><tr><td >Fase</td><td>Fechas </td></tr><tr><td colspan='2'><b>Postulación</b></td></tr><tr><td >Difusión y Plazo de Postulación</td><td>10/07/2013-22/07/2013</td></tr><tr><td colspan='2'><b>Selección</b></td></tr><tr><td >Proceso de Evaluación y Selección del Postulante</td><td>23/07/2013-07/08/2013</td></tr><tr><td colspan='2'><b>Finalización</b></td></tr><tr><td >Finalización del Proceso</td><td>09/08/2013-09/08/2013</td></tr></table></li><li style="font-size:11px;"><br/>El plazo para recibir postulaciones es hasta las <b>23:59</b> horas del <b>22/07/2013</b>.</li><br />&nbsp;<br /><li style="font-size:11px;"><b>Correo de Consultas</b><br/>seleccion@minenergia.cl</li><br />&nbsp;<br /><li style="font-size:11px;"><b>URL donde se podrán obtener mayores antecedentes del proceso</b><br/><a href="http://www.minenergia.cl/ministerio/trabaje-en-energia.html" target="_blank">http://www.minenergia.cl/ministerio/trabaje-en-energia.html</a></li><br />&nbsp;<br /></ul></span>
+                    </div>
+                    <div class="e01_espacio20"></div>
+                </div>
+                
+                <div class="e80_pant02Centro" style="width:590px; height:auto; padding:10px; border:solid 2px #ccc; border-top:none; color:#996666; font-size:10px; font-weight:bold;  margin:0px 45px;">
+                    <!--Este tipo de publicación no permite postular en línea, ya que el Portal de Empleos Públicos es utilizado sólo como medio complementario de difusión de la convocatoria y no como medio de postulación.  En este contexto, esta publicación, no contiene necesariamente toda la información del proceso, por lo que la persona interesada debe consultar mayores antecedentes directamente al Servicio Público responsable del aviso.-->
+                    Aviso Pizarrón: es un tipo de  publicación que no permite postular en línea, ya que el Portal de Empleos Públicos es utilizado sólo como medio complementario de difusión de la convocatoria y no como medio de postulación. En este contexto, esta publicación, no contiene necesariamente toda la información del proceso, por lo que la persona interesada debe consultar mayores antecedentes directamente al Servicio Público responsable del aviso.
+                    <br/>&nbsp;<br/>
+                    Las condiciones y contenidos especificados en esta publicación son determinados por el servicio público convocante. Asimismo, el desarrollo del proceso de selección es de su exclusiva responsabilidad.
+                </div>
+                <div class="e01_espacio20"></div>
+                <div class="e01_espacio20"></div>
+            </div>
+            <div class="e01_espacio20"></div>
+            <div class="e01_espacio20"></div>
+        </div>
+    </div>  
+                
+    </form>
+  
+<script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript">try { var pageTracker = _gat._getTracker("UA-10130302-1"); pageTracker._trackPageview(); } catch (err) { }</script>  
+    
+</body>
+</html>
